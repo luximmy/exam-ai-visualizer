@@ -1,0 +1,41 @@
+{
+  "name": "exam-ai-visualizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build",
+    "dev:bff": "pnpm --filter bff dev",
+    "lint": "eslint \"apps/**/*.{ts,tsx,js,vue}\"",
+    "format": "prettier --write \"apps/**/*.{ts,tsx,js,vue,json,md,css,scss}\"",
+    "test": "pnpm --filter web test"
+  },
+  "lint-staged": {
+    "apps/**/*.{ts,tsx,js,vue}": [
+      "eslint --fix"
+    ],
+    "apps/**/*.{json,md,css,scss}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.6.3",
+  "devDependencies": {
+    "@commitlint/config-conventional": "19.5.0",
+    "@typescript-eslint/eslint-plugin": "7.9.0",
+    "@typescript-eslint/parser": "7.9.0",
+    "commitlint": "19.5.0",
+    "eslint": "9.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-vue": "9.23.0",
+    "globals": "13.24.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.2",
+    "prettier": "3.2.5",
+    "typescript": "5.4.5",
+    "vue-eslint-parser": "9.4.2"
+  }
+}
